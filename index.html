@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="public/css/style.css" <meta name="viewport"
+        content="width=device-width, initial-scale=1" />
+    <script src="https://kit.fontawesome.com/f8f9624369.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Slider - Test Z&KO</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="slider">
+            <img id="1" class="sliderImg active" src="images/AvengedSevenfold.jpg" alt="">
+            <img id="2" class="sliderImg" src="images/LedZeppelin.jpg" alt="">
+            <img id="3" class="sliderImg" src="images/Metallica.jpg" alt="">
+            <img id="4" class="sliderImg" src="images/SystemOfADown.jpg" alt="">
+        </div>
+        <div class="contBtn">
+            <div class="contBtnNav left"><i class="fas fa-chevron-left"></i></div>
+
+            <div class="contBtnTimer">
+                <label for="timer">Timer (in seconds)</label>
+                <input id="timer" class="contBtnTimer" type="text" min="5" max="20" />
+            </div>
+
+            <div class="contBtnNav right"><i class="fas fa-chevron-right"></i></div>
+        </div>
+        <div class="miniatures">
+            <img id="1" class="miniaturesImg" src="images/AvengedSevenfold.jpg" alt="">
+            <img id="2" class="miniaturesImg" src="images/LedZeppelin.jpg" alt="">
+            <img id="3" class="miniaturesImg" src="images/Metallica.jpg" alt="">
+            <img id="4" class="miniaturesImg" src="images/SystemOfADown.jpg" alt="">
+        </div>
+        <button class="ajaxBtn">Ajouter les images Ajax au slider</button>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
