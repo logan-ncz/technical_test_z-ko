@@ -6,6 +6,7 @@ let count = 0
 
 var sliderImgLinks
 
+// Function to go to the next image
 function nextSlide() {
   let sliderImg = Array.from(document.querySelectorAll('.sliderImg'))
   let nbSlide = sliderImg.length
@@ -21,6 +22,7 @@ function nextSlide() {
 }
 next.addEventListener('click', nextSlide)
 
+// Function to back to the previous image
 function previousSlide() {
   let sliderImg = Array.from(document.querySelectorAll('.sliderImg'))
   let nbSlide = sliderImg.length
@@ -36,6 +38,7 @@ function previousSlide() {
 }
 previous.addEventListener('click', previousSlide)
 
+// Function to manage the timer
 $(document).ready(function () {
   var refreshIntervalId = setInterval('nextSlide()', 5000)
 
@@ -46,6 +49,7 @@ $(document).ready(function () {
   })
 })
 
+// Function to use keyboard to go to the next image or back to the previous
 function keyPress(e) {
   if (e.keyCode === 37) {
     previousSlide()
@@ -60,6 +64,7 @@ const ajaxBtn = document.querySelector('.ajaxBtn')
 
 const slider = document.querySelector('.slider')
 
+// Function to add Ajax images at the click on the button
 ajaxBtn.addEventListener('click', function addAjaxImagesToSlider() {
   $.ajax({
     type: 'POST',
@@ -84,6 +89,7 @@ ajaxBtn.addEventListener('click', function addAjaxImagesToSlider() {
   })
 })
 
+// Function to display the matching image at the click on the miniature
 function miniaturesClick(img) {
   let sliderImg = Array.from(document.querySelectorAll('.sliderImg'))
   sliderImg[count].classList.remove('active')
@@ -92,6 +98,7 @@ function miniaturesClick(img) {
   sliderImg[imgId - 1].classList.add('active')
 }
 
+// Function to add the ajax images miniatures at the click on the ajax button
 function addAjaxMiniatures() {
   let counter = 5
   let miniaturesDiv = document.querySelector('.miniatures')
